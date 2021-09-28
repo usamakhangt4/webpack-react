@@ -3,7 +3,7 @@ import { hot } from 'react-hot-loader/root';
 import HelloWorld from './components/hello-world';
 
 class App extends Component {
-  constructor(props) {
+  constructor(props: any) {
     super(props);
     this.state = {};
   }
