@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader/root';
 import HelloWorld from './components/hello-world';
+import './styles/index.scss';
 
 class App extends Component {
   constructor(props: any) {
