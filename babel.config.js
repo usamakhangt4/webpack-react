@@ -1,20 +1,9 @@
+/* eslint-disable prettier/prettier */
 module.exports = function babelConfig(api) {
   const babelEnv = api.env();
   api.cache(true);
 
-  const presets = [
-    [
-      '@babel/preset-env',
-      {
-        targets: {
-          esmodules: true,
-        },
-        corejs: '3.0.0',
-        useBuiltIns: 'usage',
-      },
-    ],
-    '@babel/preset-react',
-  ];
+  const presets = ['@babel/env', '@babel/react', '@babel/preset-typescript'];
   const plugins = [
     '@babel/transform-react-constant-elements',
     'transform-react-remove-prop-types',
@@ -32,7 +21,7 @@ module.exports = function babelConfig(api) {
     // Stage 3
     '@babel/plugin-syntax-dynamic-import',
     '@babel/plugin-syntax-import-meta',
-    ['@babel/plugin-proposal-class-properties', { loose: true }],
+    '@babel/plugin-proposal-class-properties',
     '@babel/plugin-proposal-json-strings',
   ];
 

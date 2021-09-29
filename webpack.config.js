@@ -1,3 +1,5 @@
+/* eslint-disable prettier/prettier */
+
 const webpackMerge = require('webpack-merge');
 const common = require('./webpack/webpack.common');
 
