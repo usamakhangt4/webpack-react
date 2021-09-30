@@ -1,3 +1,5 @@
+/* eslint-disable prettier/prettier */
+
 const webpack = require('webpack');
 const convert = require('koa-connect');
 const history = require('connect-history-api-fallback');
@@ -18,6 +20,11 @@ module.exports = {
           presets: ['@babel/react'],
           plugins: [['import', { libraryName: 'antd', style: true }]],
         },
+      },
+      {
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        use: ['ts-loader'],
       },
       {
         test: /\.(js|jsx)$/,
@@ -46,6 +53,17 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          // Creates `style` nodes from JS strings
+          'style-loader',
+          // Translates CSS into CommonJS
+          'css-loader',
+          // Compiles Sass to CSS
+          'sass-loader',
+        ],
+      },
     ],
   },
   serve: {
@@ -60,7 +78,7 @@ module.exports = {
   },
   resolve: {
     modules: ['src', 'node_modules'],
-    extensions: ['*', '.js', '.jsx', '.css', '.scss'],
+    extensions: ['*', '.tsx', '.ts', '.js', '.jsx', '.css', '.scss'],
   },
   plugins: [
     new webpack.ProgressPlugin(),
