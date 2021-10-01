@@ -1,6 +1,7 @@
+/* eslint-disable react/jsx-filename-extension */
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader/root';
-import HelloWorld from './components/hello-world';
+import { JavascriptOrange } from './components';
 import './styles/index.scss';
 
 class App extends Component {
@@ -10,7 +11,7 @@ class App extends Component {
   }
 
   render() {
-    return <HelloWorld title="Hello from React webpack" />;
+    return <JavascriptOrange />;
   }
 }
 
