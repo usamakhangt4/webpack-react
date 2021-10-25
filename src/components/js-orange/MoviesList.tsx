@@ -6,12 +6,12 @@ interface componentProps {
 export default function MoviesList(props: componentProps) {
   const { movies } = props;
   return (
-    <div>
+    <section className="movies">
       {movies &&
         movies.map(movie => {
           const title = movie.title.toUpperCase();
           return <h3 key={movie.id}>{title}</h3>;
         })}
-    </div>
+    </section>
   );
 }

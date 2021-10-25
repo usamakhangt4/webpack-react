@@ -1,0 +1,30 @@
+@mixin grid($grid-columns: 1fr, $column-gap: 0, $row-gap: 0, $grid-rows: none) {
+  display: grid;
+  grid-template-columns: $grid-columns;
+  grid-column-gap: $column-gap;
+  grid-row-gap: $row-gap;
+  grid-template-rows: $grid-rows;
+}
+
+@mixin flex(
+  $flex-direction: row,
+  $align-items: flex-start,
+  $justify-content: flex-start
+) {
+  display: flex;
+  flex-direction: $flex-direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin rotate($value) {
+  -ms-transform: rotate($value);
+  -webkit-transform: rotate($value);
+  transform: rotate($value);
+}
+
+@mixin gap($gap) {
+  > *:not(:last-child) {
+    margin-right: $gap;
+  }
+}

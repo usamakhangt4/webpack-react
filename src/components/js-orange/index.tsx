@@ -34,18 +34,20 @@ export default function JavascriptOrange() {
   }
 
   return (
-    <main className="javaScript-yellow-belt">
+    <main className="javaScript-orange-belt">
       <h1 className="title">YTS Movies List</h1>
       {movies ? <MoviesList movies={movies} /> : <h1>Loading...</h1>}
-      <button type="button" onClick={() => handlePrevious()}>
-        Previous page
-      </button>
-      <button type="button" onClick={() => handleRandom()}>
-        Random page
-      </button>
-      <button type="button" onClick={() => handleNext()}>
-        next page
-      </button>
+      <div className="button-container">
+        <button type="button" onClick={() => handlePrevious()}>
+          Previous page
+        </button>
+        <button type="button" onClick={() => handleRandom()}>
+          Random page
+        </button>
+        <button type="button" onClick={() => handleNext()}>
+          next page
+        </button>
+      </div>
     </main>
   );
 }

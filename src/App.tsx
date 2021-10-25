@@ -1,7 +1,8 @@
 /* eslint-disable react/jsx-filename-extension */
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { hot } from 'react-hot-loader/root';
-import { JavascriptOrange } from './components';
+import { AllBelts, JavascriptOrange } from './components';
 import './styles/index.scss';
 
 class App extends Component {
@@ -11,7 +12,14 @@ class App extends Component {
   }
 
   render() {
-    return <JavascriptOrange />;
+    return (
+      <Router>
+        <Switch>
+          <Route exact path="/" component={AllBelts} />
+          <Route path="/js-orange" component={JavascriptOrange} />
+        </Switch>
+      </Router>
+    );
   }
 }
 
