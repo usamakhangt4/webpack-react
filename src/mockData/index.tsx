@@ -5,4 +5,9 @@ export const belts = [
     title: 'JavaScript Orange',
     url: '/js-orange',
   },
+  {
+    id: 2,
+    title: 'API',
+    url: '/api-paractice',
+  },
 ];

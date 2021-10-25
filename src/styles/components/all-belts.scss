@@ -1,5 +1,5 @@
 .belts-container {
-  @include grid(repeat(2, 1fr));
+  @include grid(repeat(2, 1fr), 5rem, 5rem);
 
   .card {
     @include grid();

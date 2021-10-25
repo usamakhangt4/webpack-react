@@ -37,7 +37,7 @@ export default function JavascriptOrange() {
     <main className="javaScript-orange-belt">
       <h1 className="title">YTS Movies List</h1>
       {movies ? <MoviesList movies={movies} /> : <h1>Loading...</h1>}
-      <div className="button-container">
+      <div className="buttons-container">
         <button type="button" onClick={() => handlePrevious()}>
           Previous page
         </button>

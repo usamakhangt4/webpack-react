@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { hot } from 'react-hot-loader/root';
-import { AllBelts, JavascriptOrange } from './components';
+import { AllBelts, ApiParactice, JavascriptOrange } from './components';
 import './styles/index.scss';
 
 class App extends Component {
@@ -17,6 +17,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={AllBelts} />
           <Route path="/js-orange" component={JavascriptOrange} />
+          <Route path="/api-paractice" component={ApiParactice} />
         </Switch>
       </Router>
     );
