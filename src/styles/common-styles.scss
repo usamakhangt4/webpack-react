@@ -1,0 +1,44 @@
+@import './config.scss';
+@import './mixins.scss';
+@import './theme.scss';
+
+.main-container {
+  margin: auto;
+  max-width: 160rem;
+  padding-left: 7.3rem;
+  padding-right: 7.3rem;
+
+  @media (max-width: $breakpoint-mobile-max) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+button {
+  min-width: 15rem;
+  min-height: 3rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: $primary_color;
+  color: $secondary_color;
+  font-size: $text_3xl;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 0.8rem;
+  padding: 1rem 1rem;
+  transition: all 0.3s ease-in-out;
+  border: 0.1rem solid $secondary_color;
+
+  &:hover {
+    background: $secondary_color;
+    color: $primary_color;
+  }
+}
