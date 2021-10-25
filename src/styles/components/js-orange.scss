@@ -1,0 +1,16 @@
+.javaScript-orange-belt {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+
+  .title {
+    font-size: $text_5xl;
+    font-weight: bold;
+    color: $secondary_color;
+  }
+
+  .movies {
+    text-align: center;
+    font-size: $text_lg;
+  }
+}

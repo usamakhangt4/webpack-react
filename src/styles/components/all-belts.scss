@@ -1,0 +1,23 @@
+.belts-container {
+  @include grid(repeat(2, 1fr));
+
+  .card {
+    @include grid();
+
+    place-items: center;
+    background-color: $white_color;
+    min-width: 20rem;
+    height: 10rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-size: $text_4xl;
+    font-weight: bold;
+    box-shadow: 0 0 3rem 0.5rem rgba($white_color, 0.1);
+    transition: all 0.2s ease-in;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 3rem 0.5rem rgba($carrot-orange, 0.1);
+    }
+  }
+}
