@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { hot } from 'react-hot-loader/root';
 import { AllBelts, ApiParactice, JavascriptOrange } from './components';
-import './styles/index.scss';
 
 class App extends Component {
   constructor(props: any) {

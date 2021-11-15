@@ -41,34 +41,33 @@ html {
     height: 20px;
     background: lightgray;
   }
-}
+  body {
+    margin: 0;
+    background-color: $primary_color;
+    color: $white_color;
+    z-index: 0;
+  }
 
-body {
-  margin: 0;
-  background-color: $primary_color;
-  color: $white_color;
-  z-index: 0;
-}
+  ul {
+    padding: 0;
+  }
 
-ul {
-  padding: 0;
-}
+  li {
+    list-style: none;
+  }
 
-li {
-  list-style: none;
-}
+  a {
+    cursor: pointer;
+    text-decoration: none;
+    color: $secondary-color;
+  }
 
-a {
-  cursor: pointer;
-  text-decoration: none;
-  color: $secondary-color;
-}
+  button {
+    cursor: pointer;
+    transition: all 0.2s linear;
+  }
 
-button {
-  cursor: pointer;
-  transition: all 0.2s linear;
-}
-
-figure {
-  margin: 0;
+  figure {
+    margin: 0;
+  }
 }

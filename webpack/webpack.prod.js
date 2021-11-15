@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -49,21 +50,44 @@ module.exports = {
 
   module: {
     rules: [
+      // {
+      //   test: /\.(css|scss)$/,
+      //   use: [
+      //     MiniCssExtractPlugin.loader,
+      //     {
+      //       loader: 'css-loader',
+      //       options: {
+      //         sourceMap: false,
+      //         localsConvention: 'camelCase',
+      //         modules: {
+      //           localIdentName: '[local]___[hash:base64:5]',
+      //         },
+      //       },
+      //     },
+      //     'sass-loader',
+      //   ],
+      // },
+      // {
+      //   test: /\.s[ac]ss$/i,
+      //   use: [
+      //     // Creates `style` nodes from JS strings
+      //     'style-loader',
+      //     // Translates CSS into CommonJS
+      //     'css-loader',
+      //     // Compiles Sass to CSS
+      //     'sass-loader',
+      //   ],
+      // },
       {
-        test: /\.(css|scss)$/,
+        test: /\.css?$/,
+        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
+      },
+      {
+        test: /\.scss$/,
         use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              sourceMap: false,
-              localsConvention: 'camelCase',
-              modules: {
-                localIdentName: '[local]___[hash:base64:5]',
-              },
-            },
-          },
-          'sass-loader',
+          { loader: 'style-loader' },
+          { loader: 'css-loader' },
+          { loader: 'sass-loader' },
         ],
       },
     ],
