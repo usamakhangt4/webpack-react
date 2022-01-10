@@ -10,4 +10,14 @@ export const belts = [
     title: 'API',
     url: '/api-paractice',
   },
+  {
+    id: 3,
+    title: 'Error Boundaries',
+    url: '/error-boundaries',
+  },
+  {
+    id: 4,
+    title: 'HOC',
+    url: '/hoc',
+  },
 ];
